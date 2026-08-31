@@ -67,3 +67,33 @@ footer {
   padding: 20px;
   background-color: #102542;
 }
+
+/* NAV BLOCKS */
+.nav-blocks {
+  padding: 40px;
+  background-color: #F7F7F7;
+}
+
+.nav-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.nav-block {
+  background-color: #1A1A1A;
+  color: #F7F7F7;
+  padding: 40px 60px;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: 0.3s;
+  border: 2px solid #D4AF37;
+}
+
+.nav-block:hover {
+  background-color: #333333;
+  transform: translateY(-5px);
+}
