@@ -157,3 +157,10 @@ section {
   position: relative;
   z-index: 1;
 }
+
+/* FIX STACKING CONTEXT FOR GLASS PANELS */
+.glass-tile,
+.league-card {
+  position: relative;
+  z-index: 2;
+}
