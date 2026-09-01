@@ -122,3 +122,30 @@ a {
   color: #333;
   font-size: 15px;
 }
+
+/* GLASS TABLES */
+.glass-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.glass-table th,
+.glass-table td {
+  padding: 12px;
+  text-align: left;
+  color: #1A1A1A;
+}
+
+.glass-table th {
+  background: rgba(255, 255, 255, 0.35);
+  font-weight: bold;
+}
+
+.glass-table tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.15);
+}
