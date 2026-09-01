@@ -59,21 +59,14 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: auto;              /* ✅ allows content to expand naturally */
-  min-height: 160px;         /* ✅ keeps visual consistency for short sections */
-  margin-bottom: 60px;       /* ✅ adds spacing between sections */
+
+  /* THE FIX */
+  height: auto;        /* ← removes forced height */
+  min-height: 160px;   /* ← keeps nice look for small tiles */
+
+  margin-bottom: 60px; /* ← spacing between sections */
   position: relative;
   z-index: 2;
-}
-
-section::after {
-  content: "";
-  display: block;
-  height: 1px;
-  width: 80%;
-  margin: 40px auto 0;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 2px;
 }
 
 /* FOOTER TILE */
