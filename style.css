@@ -149,3 +149,10 @@ a {
 .glass-table tr:nth-child(even) {
   background: rgba(255, 255, 255, 0.15);
 }
+
+/* FIX OVERLAPPING SECTIONS */
+section {
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
+}
