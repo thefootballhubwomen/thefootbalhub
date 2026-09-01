@@ -58,13 +58,22 @@ a {
   transition: 0.3s;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 160px;
+  justify-content: flex-start;
+  height: auto;              /* ✅ allows content to expand naturally */
+  min-height: 160px;         /* ✅ keeps visual consistency for short sections */
+  margin-bottom: 60px;       /* ✅ adds spacing between sections */
+  position: relative;
+  z-index: 2;
 }
 
-.glass-tile:hover {
-  transform: translateY(-6px);
-  background: rgba(255, 255, 255, 0.35);
+section::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 80%;
+  margin: 40px auto 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
 }
 
 /* FOOTER TILE */
