@@ -167,3 +167,25 @@ section {
   position: relative;
   z-index: 2;
 }
+
+/* CLUB LOGO FIXES */
+.league-card img {
+  width: 60px;              /* ✅ consistent logo size */
+  height: 60px;             /* ✅ ensures uniform height */
+  object-fit: contain;      /* ✅ keeps proportions without stretching */
+  display: block;
+  margin: 0 auto 10px auto; /* ✅ centres logo above text */
+}
+
+.league-card h3 {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.league-card p {
+  text-align: center;
+  font-size: 15px;
+  color: #333;
+}
