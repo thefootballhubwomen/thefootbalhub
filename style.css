@@ -3,17 +3,17 @@
 ========================== */
 
 :root {
-  --bg: #101820;
-  --surface: #162130;
-  --card: #1c2635;
-  --card-hover: #243246;
+  --bg: #161d29;
+  --surface: #1d2635;
+  --card: #202938;
+  --card-hover: #2a3648;
 
   --accent: #00d084;
 
   --text: #ffffff;
-  --text-secondary: #a8b3c2;
+  --text-secondary: #c0cad6;
 
-  --border: #2e3b4d;
+  --border: #374455;
 }
 
 /* ==========================
@@ -34,7 +34,7 @@ a {
 }
 
 section {
-  margin-bottom: 60px;
+  margin-bottom: 70px;
   position: relative;
 }
 
@@ -52,44 +52,50 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(40%);
+  filter: brightness(45%);
 }
-
-/* Replace glass hero with simple football style */
 
 .hero-glass {
   position: absolute;
-  bottom: 50px;
+  bottom: 60px;
   left: 60px;
-
-  background: none;
-  border: none;
-
   color: white;
-  padding: 0;
 }
 
 .hero-glass h1 {
   font-size: 3rem;
-  margin-bottom: 10px;
   font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .hero-glass p {
-  color: #d0d7e2;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
+  color: #d9e1ea;
+  max-width: 600px;
 }
 
 /* ==========================
-   FEATURE GRID
+   SECTION HEADINGS
+========================== */
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+
+  margin: 0 0 25px 40px;
+}
+
+/* ==========================
+   HOMEPAGE GRID
 ========================== */
 
 .editorial-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 
   gap: 24px;
-  padding: 40px;
+  padding: 0 40px;
 }
 
 /* ==========================
@@ -101,21 +107,42 @@ section {
 
   border: 1px solid var(--border);
 
-  border-radius: 12px;
+  border-top: 3px solid transparent;
 
-  padding: 25px;
+  border-radius: 14px;
 
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  padding: 28px;
 
   transition: all 0.25s ease;
 
-  min-height: 160px;
+  min-height: 180px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .18);
 }
 
 .glass-tile:hover {
   background: var(--card-hover);
+
+  border-top: 3px solid var(--accent);
+
   transform: translateY(-4px);
-  border-color: var(--accent);
+}
+
+.glass-tile h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+
+  margin-top: 0;
+  margin-bottom: 15px;
+
+  color: var(--text);
+}
+
+.glass-tile p {
+  font-size: 1rem;
+  line-height: 1.7;
+
+  color: var(--text-secondary);
 }
 
 /* ==========================
@@ -126,8 +153,8 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 
-  gap: 25px;
-  padding: 40px;
+  gap: 24px;
+  padding: 0 40px;
 }
 
 /* ==========================
@@ -135,30 +162,33 @@ section {
 ========================== */
 
 .league-card {
-  display: block;
-
   background: var(--card);
 
   border: 1px solid var(--border);
 
-  border-radius: 12px;
+  border-radius: 14px;
 
   padding: 24px;
 
   transition: all 0.25s ease;
 
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .18);
 }
 
 .league-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent);
   background: var(--card-hover);
+
+  transform: translateY(-4px);
+
+  border-color: var(--accent);
 }
 
 .league-card img {
   width: 70px;
   height: 70px;
+
   object-fit: contain;
 
   display: block;
@@ -166,21 +196,19 @@ section {
 }
 
 .league-card h3 {
-  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  margin-bottom: 12px;
 
   color: var(--text);
-
-  font-size: 1.2rem;
-
-  margin: 10px 0;
 }
 
 .league-card p {
-  text-align: center;
+  font-size: 1rem;
+  line-height: 1.6;
 
   color: var(--text-secondary);
-
-  font-size: 0.95rem;
 }
 
 /* ==========================
@@ -201,25 +229,25 @@ section {
   margin-top: 20px;
 }
 
-.glass-table th,
-.glass-table td {
-  padding: 14px;
-  text-align: left;
-}
-
 .glass-table th {
   background: var(--surface);
 
   color: white;
 
+  padding: 15px;
+
+  font-size: 0.85rem;
+
+  font-weight: 600;
+
   text-transform: uppercase;
 
-  letter-spacing: 1px;
-
-  font-size: 13px;
+  letter-spacing: 0.5px;
 }
 
 .glass-table td {
+  padding: 15px;
+
   color: var(--text-secondary);
 }
 
@@ -228,39 +256,57 @@ section {
 }
 
 .glass-table tr:hover {
-  background: rgba(0, 208, 132, 0.08);
+  background: rgba(255,255,255,0.03);
 }
 
 /* ==========================
-   SECTION HEADINGS
+   STAT BOXES
 ========================== */
 
-h2 {
-  border-left: 4px solid var(--accent);
-
-  padding-left: 12px;
-
-  margin-left: 40px;
-
-  font-size: 1.8rem;
-}
-
-/* ==========================
-   FOOTER CARD
-========================== */
-
-.footer-tile {
-  display: block;
-
-  margin: 40px;
-
+.stat-box {
   background: var(--card);
 
   border: 1px solid var(--border);
 
   border-radius: 12px;
 
-  padding: 25px;
+  padding: 24px;
+
+  text-align: center;
+}
+
+.stat-box h3 {
+  margin: 0 0 12px;
+
+  font-size: 1rem;
+
+  color: var(--text-secondary);
+}
+
+.stat-box p {
+  margin: 0;
+
+  font-size: 2rem;
+
+  font-weight: 700;
+
+  color: var(--text);
+}
+
+/* ==========================
+   FOOTER TILE
+========================== */
+
+.footer-tile {
+  margin: 40px;
+
+  padding: 30px;
+
+  background: var(--card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 14px;
 
   text-align: center;
 }
@@ -274,36 +320,11 @@ h2 {
 
   padding: 25px;
 
-  background: #0e1724;
+  margin-top: 60px;
+
+  background: #121925;
 
   border-top: 1px solid var(--border);
 
   color: var(--text-secondary);
-}
-
-/* ==========================
-   DATABASE STAT BOXES
-========================== */
-
-.stat-box {
-  background: var(--card);
-
-  border: 1px solid var(--border);
-
-  border-radius: 10px;
-
-  padding: 20px;
-
-  text-align: center;
-}
-
-.stat-box h3 {
-  color: var(--accent);
-  margin-bottom: 10px;
-}
-
-.stat-box p {
-  color: var(--text);
-  font-size: 1.5rem;
-  font-weight: bold;
 }
